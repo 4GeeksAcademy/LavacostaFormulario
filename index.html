@@ -25,13 +25,37 @@
 
             <form class="needs-validation" novalidate>
             <div class="row g-3">
-            <!-- aquí irán los campos -->
-            </div>
 
-            <div class="mt-4 d-grid">
-            <button class="btn btn-primary" type="submit">Enviar</button>
-            </div>
-            </form>
+            <!-- aquí irán los campos -->
+
+          <div class="col-md-8">
+          <label for="ccNumber" class="form-label">Número de tarjeta de crédito *</label>
+          <input type="text" class="form-control" id="ccNumber" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" autocomplete="cc-number" pattern="[0-9\s-]{13,23}" required>
+          <div class="invalid-feedback">Introduce un número de tarjeta válido (13–19 dígitos).</div>
+          </div>
+
+          <div class="col-md-2">
+          <label for="ccCvc" class="form-label">CVC *</label>
+          <div class="input-group">
+          
+          <input type="text" class="form-control" id="ccCvc" placeholder="xxx" inputmode="numeric" autocomplete="cc-csc" pattern="\d{3,4}" required>
+          <div class="invalid-feedback">CVC de 3 o 4 dígitos.</div>
+          </div>
+          </div>
+
+
+          <div class="col-md-2">
+          <label for="amount" class="form-label">Importe *</label>
+          <div class="input-group">
+          <span class="input-group-text">€</span>
+          <input type="number" class="form-control" id="amount" placeholder="99.99" min="0" step="0.01" required>
+          <div class="invalid-feedback">Introduce un importe válido.</div>
+          </div>
+          </div>
+
+
+
+
 
           <div class="col-md-6">
             <label for="firstName" class="form-label">Nombre</label>
@@ -46,6 +70,15 @@
                   required minlength="2" autocomplete="family-name" placeholder="Tu apellido">
             <div class="invalid-feedback">Escribe tu apellido (mín. 2 letras).</div>
           </div>
+            </div>
+
+             <div class="col-md-6">
+            <label for="city" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="city" name="lastName"
+                  required minlength="2" autocomplete="family-name" placeholder="Tu apellido">
+            <div class="invalid-feedback">Escribe tu apellido (mín. 2 letras).</div>
+          </div>
+            </div>
 
           <div class="col-md-6">
             <label for="email" class="form-label">Email</label>
@@ -68,8 +101,15 @@
             <div class="invalid-feedback">Selecciona una fecha.</div>
           </div>
 
+            <div class="mt-4 d-grid">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+            </form>
+
           </div>
         </div>
       </div>
     </div>
   </main>
+</body>
+</html>
